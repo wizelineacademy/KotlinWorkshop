@@ -71,3 +71,16 @@ The step 7 you will use the previous classes to fill a function that converts th
 - Get the first element of the list or null if after the filters we have no more elements: *.firstOrNull()*
 - Uses the elvis operator *"?:"* to throw an NoSuchElementException with the message *"No available ticker"* if the pipe result is null
 - Make the tests pass
+
+# Step 8
+
+Putting all together
+
+- Go to *Main.kt* file and inside the *main* function do the follow:
+- Print the question: *"How much dollars do you want to convert?"*
+- Read the user input with *"readLine()"* and save it on a value
+- Print the message *"Please wait meanwhile I convert it"*
+- Create a *DollarBitcoinConverter* instance
+- Call the *"execute"* function sending the user input and save the return into a value named *model*
+- Print the follow message: *"${model.dollar} dollars is equal to ${model.bitcoin}"*
+- Put the *"execute"* call inside a try/catch and if there is an exception print: *"Error ${e.message}"*
