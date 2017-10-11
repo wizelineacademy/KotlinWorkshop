@@ -1,0 +1,39 @@
+// TODO apply here the kotlin plugin
+apply plugin: "application"
+
+sourceCompatibility = 1.8
+targetCompatibility = 1.8
+
+mainClassName = "com.wizeline.workshop.MainKt"
+
+buildscript {
+    repositories {
+        mavenCentral()
+    }
+    dependencies {
+        // TODO put here the kotlin build script plugin ( org.jetbrains.kotlin:kotlin-gradle-plugin:1.1.51 )
+    }
+}
+
+repositories {
+    mavenCentral()
+    jcenter()
+}
+
+sourceSets {
+    main.kotlin.srcDirs += "src/main"
+    test.kotlin.srcDirs += "src/test"
+}
+
+dependencies {
+    implementation "com.google.code.gson:gson:2.8.2"
+    implementation "com.squareup.okhttp3:okhttp:3.9.0"
+    implementation "com.squareup.retrofit2:converter-gson:2.3.0"
+    implementation "com.squareup.retrofit2:retrofit:2.3.0"
+    // TODO put here the kotlin standard library ( org.jetbrains.kotlin:kotlin-stdlib:1.1.51 )
+
+    testImplementation "com.squareup.okhttp3:mockwebserver:3.9.0"
+    testImplementation "junit:junit:4.12"
+    testImplementation "org.assertj:assertj-core:3.8.0"
+    testImplementation "org.mockito:mockito-core:2.8.47"
+}
