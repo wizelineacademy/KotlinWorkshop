@@ -84,3 +84,12 @@ Putting all together
 - Call the *"execute"* function sending the user input and save the return into a value named *model*
 - Print the follow message: *"${model.dollar} dollars is equal to ${model.bitcoin}"*
 - Put the *"execute"* call inside a try/catch and if there is an exception print: *"Error ${e.message}"*
+
+# Step 9 - Ad Libitum
+
+Fork the project and try to implement some of the following features:
+
+- Bitcoin to dollar converter (the reverse hand)
+- Convert to another cryptocurrency (Dashcoin, Ether, Dogecoin, Litecoin, etc…)
+- Convert to other currencies (Pesos, Euro, Yen, Real, etc…)
+- Add GUI (Graphical User Interface), it can be done with an Android application, or a website, or even the native Java GUI library.
