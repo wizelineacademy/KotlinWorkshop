@@ -54,3 +54,20 @@ lets extend it
 - Create a extension function to Double class named *toBitcoin()*
 - Use the pattern "0.00000000 BTC" to format the double value and return a string
 - Make the tests pass
+
+### Step 7
+
+The step 7 you will use the previous classes to fill a function that converts the dollar to bitcoin
+
+- Go to *DollarBitcoinConverter* class and inside the method *execute* do the follow steps:
+- Using the safe operator *"?."* call to *toDoubleOrNull* to get the double value from the dollar argument and save on a value named *amount*
+- Using the smart cast check if the amount is a non null double: *"if (amount is Double)"*
+- If the amount is null throw an IllegalArgumentException with the message *"Cannot convert $dollar"*
+- If the amount is a valid non null double, call *"getBitcoinTicker.execute()"* to get a list of tickers to make the conversion
+- Filter the ticker list to remove all null tickers and all tickers with null price: *".mapNotNull { it.price?.toDoubleOrNull() }"*
+- Filter again to remove values less than zero: *.filter { it > 0.0 }*
+- Map the list to have the converted value: *.map { amount / it }*
+- Map the list with converted values to our data class model: *.map { DollarBitcoinModel(amount.toDollar(), it.toBitcoin()) }*
+- Get the first element of the list or null if after the filters we have no more elements: *.firstOrNull()*
+- Uses the elvis operator *"?:"* to throw an NoSuchElementException with the message *"No available ticker"* if the pipe result is null
+- Make the tests pass
