@@ -38,3 +38,11 @@ Create the first function in a way that makes the tests pass
 - The previous method returns a retrofit object, you need to call their execute() method and then call the body() method
 - At this point you have a nullable list, uses the safe call *"?."* to filter the list to have only bitcoin tickers: *?.filter { it.id == "bitcoin" }*
 - Uses the elvis operator to send an emptyList if you receive a null: *?: emptyList()*
+
+### Step 5
+
+We see the data class powers in action.
+
+- Create a data class named *DollarBitcoinModel*
+- Add two string values to DollarBitcoinModel data class named: *dollar* and *bitcoin*
+- Make the tests pass
