@@ -20,3 +20,12 @@ On step 2 we print our first hello world
 
 - Create the main function
 - Print on stdout the *Hello World* message
+
+### Step 3
+
+In step 3 the first class should be created, and the tests are introduced, from now all steps should have the unit tests passing
+
+- Create a class property
+- Uses *@SerializedName* to read the json value
+- Make the tests pass
+
