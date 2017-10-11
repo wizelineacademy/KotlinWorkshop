@@ -29,3 +29,12 @@ In step 3 the first class should be created, and the tests are introduced, from 
 - Uses *@SerializedName* to read the json value
 - Make the tests pass
 
+### Step 4
+
+Create the first function in a way that makes the tests pass
+
+- Create a function named "execute" that returns a list of Tickers
+- Inside the execute function uses the *dataSource.getTickets* using *"bitcoin"* as coin
+- The previous method returns a retrofit object, you need to call their execute() method and then call the body() method
+- At this point you have a nullable list, uses the safe call *"?."* to filter the list to have only bitcoin tickers: *?.filter { it.id == "bitcoin" }*
+- Uses the elvis operator to send an emptyList if you receive a null: *?: emptyList()*
