@@ -46,3 +46,11 @@ We see the data class powers in action.
 - Create a data class named *DollarBitcoinModel*
 - Add two string values to DollarBitcoinModel data class named: *dollar* and *bitcoin*
 - Make the tests pass
+
+### Step 6
+
+lets extend it
+
+- Create a extension function to Double class named *toBitcoin()*
+- Use the pattern "0.00000000 BTC" to format the double value and return a string
+- Make the tests pass
