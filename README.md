@@ -13,3 +13,10 @@ The step 1 shows how to configure a Kotlin project using Gradle, the challenges 
 - Apply the Kotlin plugin
 - Add Kotlin build script dependency
 - Add the Kotlin standard library
+
+### Step 2
+
+On step 2 we print our first hello world
+
+- Create the main function
+- Print on stdout the *Hello World* message
